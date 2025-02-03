@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(value = "/sqli-00/BenchmarkTest00008")
-public class TestClass extends HttpServlet {
+public class F extends HttpServlet {
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -29,8 +29,8 @@ public class TestClass extends HttpServlet {
         String sql = "INSERT INTO users (username, password) VALUES ('foo','" + param + "')";
 
         try {
-            F f = new F();
-            f.suspiciousCall(statement,sql,response);
+            E e = new E();
+            e.suspiciousCall(statement,sql,response);
         } catch (java.sql.SQLException e) {
             if (org.owasp.benchmark.helpers.DatabaseHelper.hideSQLErrors) {
                 response.getWriter().println("Error processing request.");
