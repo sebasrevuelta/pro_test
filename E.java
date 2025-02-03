@@ -7,7 +7,7 @@ public class E {
 
     public void suspiciousCall(java.sql.Statement statement, String sql, HttpServletResponse response) throws java.sql.SQLException {    
         int count = statement.executeUpdate(sql);
-        //C.checkSQLQuery(sql);
+        C.checkSQLQuery(sql);
         org.owasp.benchmark.helpers.DatabaseHelper.outputUpdateComplete(sql, response);
     }
 
